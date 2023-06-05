@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>JOMACS Releases Nexus Repository</name>
-	      <url>http://44.201.174.50:8081/repository/1st-release/</url>
+	      <url>http://172.31.35.224:8081/repository/GTB-APP-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>JOMACS Snapshot Nexus Repository </name>
-	      <url>http://44.201.174.50:8081/repository/1st-snapshot/</url>
+	      <url>http://172.31.35.224:8081/repository/GTB-app-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
