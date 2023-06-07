@@ -33,22 +33,7 @@ pipeline{
              slackSend channel: '#ci-cd', message: 'successfully built artifact' 
           }
       }
-      stage ("5. Store built artifact in nexus"){
-          steps{
-              sh "echo start deployment to nexus"
-              sh "mvn deploy"
-              sh "echo end of deployment"
-          }
-      }
-      stage ("6. Deploy to Tomcat server in UAT"){
-          steps{
-              sh "echo start deployment"
-deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://16.170.201.165:8080/')], contextPath: null, war: 'target/*.war'
-             sh "echo end of deployment"
-          }
-      }
-     
     }
      
 }
-        
+   
