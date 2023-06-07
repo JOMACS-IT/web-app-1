@@ -46,33 +46,9 @@ pipeline{
 deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://16.170.201.165:8080/')], contextPath: null, war: 'target/*.war'
              sh "echo end of deployment"
           }
-          
-    /*      
       }
-      stage("7. Approval from P.M"){
-          steps{
-              sh "echo approval require from PM"
-              timeout(time:3, unit:'DAYS'){
-                  input message: "Approval from PM required"
-              }
-          }
-      }
-      stage ("8. Deployment to Prod Env"){
-          steps{
-              sh "echo start deployment to prod env"
-              deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://16.170.201.165:8080/')], contextPath: null, war: 'target/*.war'
-              sh "echo end of deployment"
-          }
-      }
-      stage ("9. Send email to developers"){
-          steps{
-              sh "echo start sending mails"
-              emailext body: 'Artifact has successfully been deployed', subject: 'successful deployment', to: 'successfulprince302@gmail.com'
-          }
-      }
-      */
+     
     }
      
 }
         
-    
